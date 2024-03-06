@@ -1,6 +1,9 @@
 // Importeer het npm pakket express uit de node_modules map
 import express from 'express'
 
+// Importeer de zelfgemaakte functie fetchJson uit de ./helpers map
+import fetchJson from './helpers/fetch-json.js'
+console.log('hoi')
 // Maak een nieuwe express app aan
 const app = express()
 
@@ -15,6 +18,12 @@ app.use(express.static('public'))
 
 app.use(express.urlencoded({ extended: true }))
 
+// Maak een GET route voor de index
+app.get('/', function (request, response) {
+  // Render index.ejs uit de views map
+  response.render('index');
+});
+
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)
 
@@ -24,8 +33,3 @@ app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
-// Maak een GET route voor de index
-app.get('/', function (request, response) {
-      // Render index.ejs uit de views map
-      response.render('index');
-    });
