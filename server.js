@@ -3,7 +3,7 @@ import express from 'express'
 
 // Importeer de zelfgemaakte functie fetchJson uit de ./helpers map
 import fetchJson from './helpers/fetch-json.js'
-console.log('hoi')
+
 // Maak een nieuwe express app aan
 const app = express()
 
@@ -23,6 +23,14 @@ app.get('/', function (request, response) {
   // Render index.ejs uit de views map
   response.render('index');
 });
+
+app.get('/klanten', function(request, response){
+response.render ('klanten');
+});
+
+app.get('/leveranciers', function(request, response){
+  response.render ('leveranciers');
+  });
 
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)

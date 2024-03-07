@@ -1,0 +1,32 @@
+:root {
+
+    /*Kleuren*/
+    --mainColor: #00868C;
+    --secundairyColor: #00937A;
+    --tertiaryColor: #66A281;
+    --quarternaryColor: #8BC6AC;
+    --quinaryColor: #99D5CB;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--mainColor);
+    color: var(--quinaryColor);
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.temp{
+white-space: pre-wrap;
+text-align: center;
+}
