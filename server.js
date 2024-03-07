@@ -28,9 +28,15 @@ app.get('/klanten', function (request, response){
 response.render ('klanten');
 });
 
-app.get('/leveranciers', function (request, response){
-  response.render ('leveranciers');
+app.get('/calculator', function (request, response){
+
+  fetchJson('https://fdnd-agency.directus.app/items/hf_sdgs').then((sdgDataUitDeAPI) => {
+		response.render('calculator', {sdgs: sdgDataUitDeAPI.data}) 
+    console.log(sdgData.data)
+	});
   });
+
+
 
 // Stel het poortnummer in waar express op moet gaan luisteren
 app.set('port', process.env.PORT || 8000)
