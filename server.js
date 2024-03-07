@@ -24,11 +24,11 @@ app.get('/', function (request, response) {
   response.render('index');
 });
 
-app.get('/klanten/', function(request, response){
+app.get('/klanten', function (request, response){
 response.render ('klanten');
 });
 
-app.get('/leveranciers/', function(request, response){
+app.get('/leveranciers', function (request, response){
   response.render ('leveranciers');
   });
 
