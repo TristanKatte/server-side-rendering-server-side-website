@@ -24,8 +24,8 @@ app.get('/', function (request, response) {
   response.render('index');
 });
 
-app.get('/klanten', function (request, response){
-response.render ('klanten');
+app.get('/vragen', function (request, response){
+response.render ('vragen');
 });
 
 app.get('/calculator', function (request, response){
