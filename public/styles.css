@@ -1,18 +1,13 @@
 :root {
-
-    /*Kleuren*/
-    --mainColor: #00868C;
-    --secundairyColor: #00937A;
-    --tertiaryColor: #66A281;
-    --quarternaryColor: #8BC6AC;
-    --quinaryColor: #99D5CB;
-
     /* secundaire palette */
-    --bgcolor:#171717;
-    --textcolor:#fefefe;
-    --primarycolor:#435f38;
-    --secondarycolor:#5a4b1e;
-    --bordercolor:#fefefe3b;
+    --BGcolor:#272932;
+    --PrimaryColor:#947eb0;
+    --Secondarycolor:#519879;
+    --TextColor:#ecf8f8;
+    --Accentcolor:#fb8b24;
+
+    /* Typography */
+--heading1: 
 
 
 }
@@ -24,15 +19,34 @@
 }
 
 body {
-    background-color: var(--quinaryColor);
-    color: var(--textcolor);
+    background-color: var(--BGcolor);
+    color: var(--TextColor);
     overflow: hidden;
 }
 
 h1{
     text-align: center;
     font-size: 2em;
+    font-family: halton, sans-serif;
     text-transform: uppercase;
+    color: var(--TextColor);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  font-family: halton, sans-serif;
+  padding: 1.5em;
+
+}
+
+p {
+  font-family: halton-italic, sans-serif;
+  font-size: 1em;
+}
+
+img {
+  scale: 0.3;
 }
 
 .temp{
@@ -47,7 +61,7 @@ header{
 
 }
 nav {
-    border-bottom: 1px solid var(--bordercolor);
+    border-bottom: 1px solid var(--Accentcolor);
     & ul {
         list-style: none;
         display: flex;
@@ -65,62 +79,7 @@ nav {
     }
 }
 
-.container-fluid {
-    background: radial-gradient(
-      ellipse at center,
-      rgba(255, 254, 234, 1) 0%,
-      rgba(255, 254, 234, 1) 35%,
-      #b7e8eb 100%
-    );
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-  }
-  
-  .ocean {
-    height: 1%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #015871;
-  }
-  
-  .wave {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg)
-      repeat-x;
-    position: absolute;
-    top: -198px;
-    width: 6400px;
-    height: 198px;
-    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-    transform: translate3d(0, 0, 0);
-  }
-  
-  .wave:nth-of-type(2) {
-    top: -175px;
-    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
-      swell 7s ease -1.25s infinite;
-    opacity: 1;
-  }
-  
-  @keyframes wave {
-    0% {
-      margin-left: 0;
-    }
-  
-    100% {
-      margin-left: -1600px;
-    }
-  }
-  
-  @keyframes swell {
-    0%,
-    100% {
-      transform: translate3d(0, -25px, 0);
-    }
-  
-    50% {
-      transform: translate3d(0, 5px, 0);
-    }
-  }
+svg {
+  position: fixed;
+  bottom: 0;
+}
