@@ -6,8 +6,7 @@
     --TextColor:#ecf8f8;
     --Accentcolor:#fb8b24;
 
-    /* Typography */
---heading1: 
+
 
 
 }
@@ -21,7 +20,7 @@
 body {
     background-color: var(--BGcolor);
     color: var(--TextColor);
-    overflow: hidden;
+    
 }
 
 h1{
@@ -46,8 +45,22 @@ p {
 }
 
 img {
-  scale: 0.3;
+  width: 300px;
+  height: 300px;
+  margin: 3em;
 }
+
+section  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: column;
+    flex-wrap: wrap;
+    padding: 3.5em;
+    width: 50%;
+}
+
+
 
 .temp{
 white-space: pre-wrap;
@@ -72,14 +85,11 @@ nav {
             padding: .8em;
 
             & a {
-                color: var(--textcolor);
+                color: var(--TextColor);
                 text-decoration: none;
+                font-family: halton-italic, sans-serif;
             }
         }
     }
 }
 
-svg {
-  position: fixed;
-  bottom: 0;
-}

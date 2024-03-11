@@ -36,6 +36,8 @@ app.get('/calculator', function (request, response){
 	});
   });
 
+  
+
 
 
 // Stel het poortnummer in waar express op moet gaan luisteren

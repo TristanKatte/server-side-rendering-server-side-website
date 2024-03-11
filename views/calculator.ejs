@@ -1,11 +1,14 @@
 <%- include('./partials/head') %>
-
+<section>
 <% sdgs.forEach (function (sdg){ %>
-    <section>
-<%= sdg.description %>, <img src="https://fdnd-agency.directus.app/assets/<%=sdg.icon%> alt="">
-    </section>
+    
+         <img src="https://fdnd-agency.directus.app/assets/<%=sdg.icon%> alt="">
+    
 <% }) %>
 
+
+
+</section>
 
 
 <%- include('./partials/foot') %>
