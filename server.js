@@ -31,7 +31,7 @@ response.render ('vragen');
 app.get('/calculator', function (request, response){
 
   fetchJson('https://fdnd-agency.directus.app/items/hf_sdgs').then((sdgDataUitDeAPI) => {
-		response.render('calculator', {sdgs: apiData.data })
+		response.render('calculator', {sdgs: sdgDataUitDeAPI.data });
     
 	});
   });
